@@ -3,7 +3,7 @@ package betamindy.content;
 import arc.*;
 import mindustry.*;
 
-public class SettingAdder {
+public class SettingAdder{
 
     public static void addGraphicSetting(String key){
         Vars.ui.settings.graphics.checkPref(key, Core.settings.getBool(key));

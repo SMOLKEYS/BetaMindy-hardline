@@ -254,7 +254,8 @@ public class ClearPipe extends Block {
                     suckSound.at(this);
                 }else{
                     float len = Math.min(150f, ((net.active() ? unit.hitSize * 1.3f : unit.icon().width) - UnitinaBottle.maxDrawSize) / 3f) + 15f;
-                    final int sfxid = squeezeSound.at(x, y, 1f, 0.7f);
+                    // TODO minor bug: when the sound plays for the first time, it doesn't get stopped, but all other subsequent calls stop normally
+                    int sfxid = squeezeSound.at(x, y, 1f, 0.7f);
                     Time.run(len, () -> {
                         Core.audio.stop(sfxid);
                         suckSound.at(this);

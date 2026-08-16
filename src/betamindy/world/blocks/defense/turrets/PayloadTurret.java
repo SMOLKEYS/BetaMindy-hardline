@@ -45,7 +45,7 @@ public class PayloadTurret extends Turret{
 
     public TextureRegion inRegion, topRegion;
 
-    protected ObjectSet<Block> homingBlocks = new ObjectSet<Block>(2);
+    protected ObjectSet<Block> homingBlocks = new ObjectSet<>(2);
 
     public PayloadTurret(String name){
         super(name);
